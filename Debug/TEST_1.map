@@ -1,7 +1,7 @@
 ******************************************************************************
              TMS320C2000 Linker PC v16.9.1                     
 ******************************************************************************
->> Linked Sat Feb 25 19:26:07 2017
+>> Linked Sat Feb 25 19:51:10 2017
 
 OUTPUT FILE NAME:   <TEST_1.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 003f8b6d
@@ -14,12 +14,12 @@ MEMORY CONFIGURATION
 PAGE 0:
   RAMM0                 00000000   00000400  00000000  00000400  RWIX
   BEGIN                 003f8000   00000002  00000000  00000002  RWIX
-  PRAMH0                003f8002   00000ffe  00000e07  000001f7  RWIX
+  PRAMH0                003f8002   00000ffe  00000e0c  000001f2  RWIX
   RESET                 003fffc0   00000002  00000000  00000002  RWIX
 
 PAGE 1:
   RAMM1                 00000400   00000400  00000400  00000000  RWIX
-  DRAMH0                003f9000   00001000  00000760  000008a0  RWIX
+  DRAMH0                003f9000   00001000  0000076e  00000892  RWIX
 
 
 SECTION ALLOCATION MAP
@@ -27,7 +27,7 @@ SECTION ALLOCATION MAP
  output                                  attributes/
 section   page    origin      length       input sections
 --------  ----  ----------  ----------   ----------------
-.text      0    003f8002    00000d8a     
+.text      0    003f8002    00000d8f     
                   003f8002    00000264     rts2800_ml.lib : trgdrv.obj (.text)
                   003f8266    000001ff                    : lowlev.obj (.text)
                   003f8465    000001cd                    : memory.obj (.text)
@@ -48,28 +48,28 @@ section   page    origin      length       input sections
                   003f8ccc    00000022                    : strncpy.obj (.text)
                   003f8cee    0000001d                    : memcpy.obj (.text)
                   003f8d0b    00000019                    : args_main.obj (.text)
-                  003f8d24    00000010                    : memchr.obj (.text)
-                  003f8d34    0000000e     hello.obj (.text)
-                  003f8d42    0000000d     rts2800_ml.lib : memccpy.obj (.text)
-                  003f8d4f    0000000c                    : memset.obj (.text)
-                  003f8d5b    0000000b                    : strchr.obj (.text)
-                  003f8d66    0000000a                    : strcmp.obj (.text)
-                  003f8d70    00000009                    : _lock.obj (.text)
-                  003f8d79    00000008                    : strlen.obj (.text)
-                  003f8d81    00000005                    : strcpy.obj (.text)
-                  003f8d86    00000003                    : remove.obj (.text)
-                  003f8d89    00000002                    : pre_init.obj (.text)
-                  003f8d8b    00000001                    : startup.obj (.text)
+                  003f8d24    00000013     hello.obj (.text)
+                  003f8d37    00000010     rts2800_ml.lib : memchr.obj (.text)
+                  003f8d47    0000000d                    : memccpy.obj (.text)
+                  003f8d54    0000000c                    : memset.obj (.text)
+                  003f8d60    0000000b                    : strchr.obj (.text)
+                  003f8d6b    0000000a                    : strcmp.obj (.text)
+                  003f8d75    00000009                    : _lock.obj (.text)
+                  003f8d7e    00000008                    : strlen.obj (.text)
+                  003f8d86    00000005                    : strcpy.obj (.text)
+                  003f8d8b    00000003                    : remove.obj (.text)
+                  003f8d8e    00000002                    : pre_init.obj (.text)
+                  003f8d90    00000001                    : startup.obj (.text)
 
-.cinit     0    003f8d8c    0000007d     
-                  003f8d8c    00000031     rts2800_ml.lib : lowlev.obj (.cinit)
-                  003f8dbd    0000002a                    : defs.obj (.cinit)
-                  003f8de7    0000000e                    : exit.obj (.cinit)
-                  003f8df5    00000005                    : _lock.obj (.cinit:__lock)
-                  003f8dfa    00000005                    : _lock.obj (.cinit:__unlock)
-                  003f8dff    00000004                    : fopen.obj (.cinit)
-                  003f8e03    00000004                    : memory.obj (.cinit)
-                  003f8e07    00000002     --HOLE-- [fill = 0]
+.cinit     0    003f8d91    0000007d     
+                  003f8d91    00000031     rts2800_ml.lib : lowlev.obj (.cinit)
+                  003f8dc2    0000002a                    : defs.obj (.cinit)
+                  003f8dec    0000000e                    : exit.obj (.cinit)
+                  003f8dfa    00000005                    : _lock.obj (.cinit:__lock)
+                  003f8dff    00000005                    : _lock.obj (.cinit:__unlock)
+                  003f8e04    00000004                    : fopen.obj (.cinit)
+                  003f8e08    00000004                    : memory.obj (.cinit)
+                  003f8e0c    00000002     --HOLE-- [fill = 0]
 
 .pinit     0    003f8002    00000000     UNINITIALIZED
 
@@ -94,23 +94,23 @@ section   page    origin      length       input sections
                   003f957b    00000005     --HOLE--
                   003f9580    00000088                    : lowlev.obj (.ebss)
 
-.econst    1    003f9608    00000038     
-                  003f9608    00000021     hello.obj (.econst:.string)
-                  003f9629    00000001     --HOLE-- [fill = 0]
-                  003f962a    00000014     rts2800_ml.lib : _printfi_min.obj (.econst:.string)
-                  003f963e    00000002                    : fputs.obj (.econst:.string)
+.econst    1    003f9608    00000046     
+                  003f9608    0000002f     hello.obj (.econst:.string)
+                  003f9637    00000001     --HOLE-- [fill = 0]
+                  003f9638    00000014     rts2800_ml.lib : _printfi_min.obj (.econst:.string)
+                  003f964c    00000002                    : fputs.obj (.econst:.string)
 
-.cio       1    003f9640    00000120     UNINITIALIZED
-                  003f9640    00000120     rts2800_ml.lib : trgmsg.obj (.cio)
+.cio       1    003f9680    00000120     UNINITIALIZED
+                  003f9680    00000120     rts2800_ml.lib : trgmsg.obj (.cio)
 
 MODULE SUMMARY
 
        Module             code   initialized data   uninitialized data
        ------             ----   ----------------   ------------------
     .\
-       hello.obj          14     33                 0                 
+       hello.obj          19     47                 0                 
     +--+------------------+------+------------------+--------------------+
-       Total:             14     33                 0                 
+       Total:             19     47                 0                 
                                                                       
     C:\ti\ccsv7\tools\compiler\ti-cgt-c2000_16.9.1.LTS\lib\rts2800_ml.lib
        lowlev.obj         511    49                 136               
@@ -151,7 +151,7 @@ MODULE SUMMARY
        Heap:              0      0                  1024              
        Stack:             0      0                  1024              
     +--+------------------+------+------------------+--------------------+
-       Grand Total:       3466   178                2851              
+       Grand Total:       3471   192                2851              
 
 
 GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
@@ -174,7 +174,7 @@ address     data page           name
 003f9576    fe55 (003f9540)     __lock
 003f9578    fe55 (003f9540)     __unlock
 
-003f9640    fe59 (003f9640)     __CIOBUF_
+003f9680    fe5a (003f9680)     __CIOBUF_
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
@@ -195,7 +195,7 @@ page  address   name
 0     003f805f  _HOSTtime64                     
 0     003f803a  _HOSTunlink                     
 0     003f8002  _HOSTwrite                      
-1     003f9640  __CIOBUF_                       
+1     003f9680  __CIOBUF_                       
 1     00000800  __STACK_END                     
 abs   00000400  __STACK_SIZE                    
 abs   00000400  __SYSMEM_SIZE                   
@@ -217,20 +217,20 @@ abs   ffffffff  ___TI_prof_data_start
 0     003f8aab  ___TI_wrt_ok                    
 abs   ffffffff  ___binit__                      
 abs   ffffffff  ___c_args__                     
-0     003f8d8c  ___cinit__                      
-0     003f8d8c  ___etext__                      
+0     003f8d91  ___cinit__                      
+0     003f8d91  ___etext__                      
 abs   ffffffff  ___pinit__                      
 0     003f8002  ___text__                       
 0     003f8d0b  __args_main                     
 1     003f9440  __ftable                        
 1     003f9576  __lock                          
-0     003f8d78  __nop                           
-0     003f8d74  __register_lock                 
-0     003f8d70  __register_unlock               
+0     003f8d7d  __nop                           
+0     003f8d79  __register_lock                 
+0     003f8d75  __register_unlock               
 1     00000400  __stack                         
 1     003f9000  __sys_memory                    
-0     003f8d8b  __system_post_cinit             
-0     003f8d89  __system_pre_init               
+0     003f8d90  __system_post_cinit             
+0     003f8d8e  __system_pre_init               
 1     003f9578  __unlock                        
 0     003f8c7f  _abort                          
 0     003f83fc  _add_device                     
@@ -250,13 +250,13 @@ abs   ffffffff  ___pinit__
 0     003f882c  _freopen                        
 0     003f8c10  _fseek                          
 0     003f83b1  _lseek                          
-0     003f8d34  _main                           
+0     003f8d24  _main                           
 0     003f84ce  _malloc                         
 0     003f85df  _max_free                       
-0     003f8d42  _memccpy                        
-0     003f8d24  _memchr                         
+0     003f8d47  _memccpy                        
+0     003f8d37  _memchr                         
 0     003f8cee  _memcpy                         
-0     003f8d4f  _memset                         
+0     003f8d54  _memset                         
 0     003f84ab  _minit                          
 0     003f8342  _open                           
 0     003f8c53  _printf                         
@@ -265,20 +265,20 @@ abs   ffffffff  ___pinit__
 0     003f8920  _puts                           
 0     003f832a  _read                           
 0     003f852b  _realloc                        
-0     003f8d86  _remove                         
+0     003f8d8b  _remove                         
 0     003f8310  _remove_device                  
 0     003f82e5  _rename                         
 0     003f89c7  _setvbuf                        
-0     003f8d5b  _strchr                         
-0     003f8d66  _strcmp                         
-0     003f8d81  _strcpy                         
-0     003f8d79  _strlen                         
+0     003f8d60  _strchr                         
+0     003f8d6b  _strcmp                         
+0     003f8d86  _strcpy                         
+0     003f8d7e  _strlen                         
 0     003f8ccc  _strncpy                        
 0     003f82cc  _unlink                         
 0     003f8266  _write                          
 abs   ffffffff  binit                           
-0     003f8d8c  cinit                           
-0     003f8d8c  etext                           
+0     003f8d91  cinit                           
+0     003f8d91  etext                           
 abs   ffffffff  pinit                           
 
 
@@ -345,24 +345,24 @@ page  address   name
 0     003f8ccc  _strncpy                        
 0     003f8cee  _memcpy                         
 0     003f8d0b  __args_main                     
-0     003f8d24  _memchr                         
-0     003f8d34  _main                           
-0     003f8d42  _memccpy                        
-0     003f8d4f  _memset                         
-0     003f8d5b  _strchr                         
-0     003f8d66  _strcmp                         
-0     003f8d70  __register_unlock               
-0     003f8d74  __register_lock                 
-0     003f8d78  __nop                           
-0     003f8d79  _strlen                         
-0     003f8d81  _strcpy                         
-0     003f8d86  _remove                         
-0     003f8d89  __system_pre_init               
-0     003f8d8b  __system_post_cinit             
-0     003f8d8c  ___cinit__                      
-0     003f8d8c  ___etext__                      
-0     003f8d8c  cinit                           
-0     003f8d8c  etext                           
+0     003f8d24  _main                           
+0     003f8d37  _memchr                         
+0     003f8d47  _memccpy                        
+0     003f8d54  _memset                         
+0     003f8d60  _strchr                         
+0     003f8d6b  _strcmp                         
+0     003f8d75  __register_unlock               
+0     003f8d79  __register_lock                 
+0     003f8d7d  __nop                           
+0     003f8d7e  _strlen                         
+0     003f8d86  _strcpy                         
+0     003f8d8b  _remove                         
+0     003f8d8e  __system_pre_init               
+0     003f8d90  __system_post_cinit             
+0     003f8d91  ___cinit__                      
+0     003f8d91  ___etext__                      
+0     003f8d91  cinit                           
+0     003f8d91  etext                           
 1     00000400  __stack                         
 1     00000800  __STACK_END                     
 1     003f9000  __sys_memory                    
@@ -374,7 +374,7 @@ page  address   name
 1     003f9574  ___TI_dtors_ptr                 
 1     003f9576  __lock                          
 1     003f9578  __unlock                        
-1     003f9640  __CIOBUF_                       
+1     003f9680  __CIOBUF_                       
 abs   00000400  __STACK_SIZE                    
 abs   00000400  __SYSMEM_SIZE                   
 abs   ffffffff  ___TI_pprof_out_hndl            
