@@ -1,0 +1,388 @@
+******************************************************************************
+             TMS320C2000 Linker PC v16.9.1                     
+******************************************************************************
+>> Linked Sat Feb 25 18:59:55 2017
+
+OUTPUT FILE NAME:   <TEST_1.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 003f8b6d
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  RAMM0                 00000000   00000400  00000000  00000400  RWIX
+  BEGIN                 003f8000   00000002  00000000  00000002  RWIX
+  PRAMH0                003f8002   00000ffe  00000e02  000001fc  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+
+PAGE 1:
+  RAMM1                 00000400   00000400  00000400  00000000  RWIX
+  DRAMH0                003f9000   00001000  0000074c  000008b4  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text      0    003f8002    00000d85     
+                  003f8002    00000264     rts2800_ml.lib : trgdrv.obj (.text)
+                  003f8266    000001ff                    : lowlev.obj (.text)
+                  003f8465    000001cd                    : memory.obj (.text)
+                  003f8632    00000165                    : _printfi_min.obj (.text)
+                  003f8797    000000f9                    : fopen.obj (.text)
+                  003f8890    000000a3                    : fputs.obj (.text)
+                  003f8933    00000094                    : trgmsg.obj (.text)
+                  003f89c7    00000079                    : setvbuf.obj (.text)
+                  003f8a40    0000006b                    : fflush.obj (.text)
+                  003f8aab    00000067                    : _io_perm.obj (.text)
+                  003f8b12    0000005b                    : fclose.obj (.text)
+                  003f8b6d    00000054                    : boot28.obj (.text)
+                  003f8bc1    0000004f                    : fputc.obj (.text)
+                  003f8c10    0000003d                    : fseek.obj (.text)
+                  003f8c4d    00000032                    : printf.obj (.text)
+                  003f8c7f    00000029                    : exit.obj (.text)
+                  003f8ca8    00000024                    : cpy_tbl.obj (.text)
+                  003f8ccc    00000022                    : strncpy.obj (.text)
+                  003f8cee    0000001d                    : memcpy.obj (.text)
+                  003f8d0b    00000019                    : args_main.obj (.text)
+                  003f8d24    00000010                    : memchr.obj (.text)
+                  003f8d34    0000000d                    : memccpy.obj (.text)
+                  003f8d41    0000000c                    : memset.obj (.text)
+                  003f8d4d    0000000b                    : strchr.obj (.text)
+                  003f8d58    0000000a                    : strcmp.obj (.text)
+                  003f8d62    00000009     hello.obj (.text)
+                  003f8d6b    00000009     rts2800_ml.lib : _lock.obj (.text)
+                  003f8d74    00000008                    : strlen.obj (.text)
+                  003f8d7c    00000005                    : strcpy.obj (.text)
+                  003f8d81    00000003                    : remove.obj (.text)
+                  003f8d84    00000002                    : pre_init.obj (.text)
+                  003f8d86    00000001                    : startup.obj (.text)
+
+.cinit     0    003f8d87    0000007d     
+                  003f8d87    00000031     rts2800_ml.lib : lowlev.obj (.cinit)
+                  003f8db8    0000002a                    : defs.obj (.cinit)
+                  003f8de2    0000000e                    : exit.obj (.cinit)
+                  003f8df0    00000005                    : _lock.obj (.cinit:__lock)
+                  003f8df5    00000005                    : _lock.obj (.cinit:__unlock)
+                  003f8dfa    00000004                    : fopen.obj (.cinit)
+                  003f8dfe    00000004                    : memory.obj (.cinit)
+                  003f8e02    00000002     --HOLE-- [fill = 0]
+
+.pinit     0    003f8002    00000000     UNINITIALIZED
+
+.reset     0    003fffc0    00000002     DSECT
+                  003fffc0    00000002     rts2800_ml.lib : boot28.obj (.reset)
+
+.stack     1    00000400    00000400     UNINITIALIZED
+                  00000400    00000400     --HOLE--
+
+.esysmem   1    003f9000    00000400     UNINITIALIZED
+                  003f9000    00000001     rts2800_ml.lib : memory.obj (.esysmem)
+                  003f9001    000003ff     --HOLE--
+
+.ebss      1    003f9400    00000208     UNINITIALIZED
+                  003f9400    00000160     rts2800_ml.lib : defs.obj (.ebss)
+                  003f9560    00000008                    : memory.obj (.ebss)
+                  003f9568    00000008                    : trgdrv.obj (.ebss)
+                  003f9570    00000006                    : exit.obj (.ebss)
+                  003f9576    00000002                    : _lock.obj (.ebss:__lock)
+                  003f9578    00000002                    : _lock.obj (.ebss:__unlock)
+                  003f957a    00000001                    : fopen.obj (.ebss)
+                  003f957b    00000005     --HOLE--
+                  003f9580    00000088                    : lowlev.obj (.ebss)
+
+.econst    1    003f9608    00000024     
+                  003f9608    00000014     rts2800_ml.lib : _printfi_min.obj (.econst:.string)
+                  003f961c    0000000e     hello.obj (.econst:.string)
+                  003f962a    00000002     rts2800_ml.lib : fputs.obj (.econst:.string)
+
+.cio       1    003f9640    00000120     UNINITIALIZED
+                  003f9640    00000120     rts2800_ml.lib : trgmsg.obj (.cio)
+
+MODULE SUMMARY
+
+       Module             code   initialized data   uninitialized data
+       ------             ----   ----------------   ------------------
+    .\
+       hello.obj          9      14                 0                 
+    +--+------------------+------+------------------+--------------------+
+       Total:             9      14                 0                 
+                                                                      
+    C:\ti\ccsv7\tools\compiler\ti-cgt-c2000_16.9.1.LTS\lib\rts2800_ml.lib
+       lowlev.obj         511    49                 136               
+       trgdrv.obj         612    0                  8                 
+       memory.obj         461    4                  8                 
+       trgmsg.obj         148    0                  288               
+       defs.obj           0      42                 352               
+       _printfi_min.obj   357    20                 0                 
+       fopen.obj          249    4                  1                 
+       fputs.obj          163    2                  0                 
+       setvbuf.obj        121    0                  0                 
+       fflush.obj         107    0                  0                 
+       _io_perm.obj       103    0                  0                 
+       fclose.obj         91     0                  0                 
+       boot28.obj         84     0                  0                 
+       fputc.obj          79     0                  0                 
+       exit.obj           41     14                 6                 
+       fseek.obj          61     0                  0                 
+       printf.obj         50     0                  0                 
+       cpy_tbl.obj        36     0                  0                 
+       strncpy.obj        34     0                  0                 
+       memcpy.obj         29     0                  0                 
+       args_main.obj      25     0                  0                 
+       _lock.obj          9      10                 4                 
+       memchr.obj         16     0                  0                 
+       memccpy.obj        13     0                  0                 
+       memset.obj         12     0                  0                 
+       strchr.obj         11     0                  0                 
+       strcmp.obj         10     0                  0                 
+       strlen.obj         8      0                  0                 
+       strcpy.obj         5      0                  0                 
+       remove.obj         3      0                  0                 
+       pre_init.obj       2      0                  0                 
+       startup.obj        1      0                  0                 
+    +--+------------------+------+------------------+--------------------+
+       Total:             3452   145                803               
+                                                                      
+       Heap:              0      0                  1024              
+       Stack:             0      0                  1024              
+    +--+------------------+------+------------------+--------------------+
+       Grand Total:       3461   159                2851              
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+address     data page           name
+--------    ----------------    ----
+00000400      10 (00000400)     __stack
+
+003f9000    fe40 (003f9000)     __sys_memory
+
+003f9400    fe50 (003f9400)     ___TI_ft_end
+
+003f9440    fe51 (003f9440)     __ftable
+
+003f94c0    fe53 (003f94c0)     ___TI_tmpnams
+
+003f9570    fe55 (003f9540)     ___TI_enable_exit_profile_output
+003f9572    fe55 (003f9540)     ___TI_cleanup_ptr
+003f9574    fe55 (003f9540)     ___TI_dtors_ptr
+003f9576    fe55 (003f9540)     __lock
+003f9578    fe55 (003f9540)     __unlock
+
+003f9640    fe59 (003f9640)     __CIOBUF_
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+page  address   name                            
+----  -------   ----                            
+0     003f8002  .text                           
+0     003f8c7f  C$$EXIT                         
+0     003f8986  C$$IO$$                         
+0     003f8232  _HOSTclock                      
+0     003f820b  _HOSTclose                      
+0     003f81e3  _HOSTgetenv                     
+0     003f8187  _HOSTlseek                      
+0     003f814e  _HOSTopen                       
+0     003f8116  _HOSTread                       
+0     003f80d7  _HOSTrename                     
+0     003f80a3  _HOSTtime                       
+0     003f805f  _HOSTtime64                     
+0     003f803a  _HOSTunlink                     
+0     003f8002  _HOSTwrite                      
+1     003f9640  __CIOBUF_                       
+1     00000800  __STACK_END                     
+abs   00000400  __STACK_SIZE                    
+abs   00000400  __SYSMEM_SIZE                   
+0     003f880f  ___TI_cleanup                   
+1     003f9572  ___TI_cleanup_ptr               
+0     003f8b12  ___TI_closefile                 
+0     003f8a40  ___TI_doflush                   
+1     003f9574  ___TI_dtors_ptr                 
+1     003f9570  ___TI_enable_exit_profile_output
+1     003f9400  ___TI_ft_end                    
+abs   ffffffff  ___TI_pprof_out_hndl            
+0     003f8739  ___TI_printfi_minimal           
+abs   ffffffff  ___TI_prof_data_size            
+abs   ffffffff  ___TI_prof_data_start           
+0     003f8ae6  ___TI_rd_ok                     
+0     003f898b  ___TI_readmsg                   
+1     003f94c0  ___TI_tmpnams                   
+0     003f8933  ___TI_writemsg                  
+0     003f8aab  ___TI_wrt_ok                    
+abs   ffffffff  ___binit__                      
+abs   ffffffff  ___c_args__                     
+0     003f8d87  ___cinit__                      
+0     003f8d87  ___etext__                      
+abs   ffffffff  ___pinit__                      
+0     003f8002  ___text__                       
+0     003f8d0b  __args_main                     
+1     003f9440  __ftable                        
+1     003f9576  __lock                          
+0     003f8d73  __nop                           
+0     003f8d6f  __register_lock                 
+0     003f8d6b  __register_unlock               
+1     00000400  __stack                         
+1     003f9000  __sys_memory                    
+0     003f8d86  __system_post_cinit             
+0     003f8d84  __system_pre_init               
+1     003f9578  __unlock                        
+0     003f8c7f  _abort                          
+0     003f83fc  _add_device                     
+0     003f8b6d  _c_int00                        
+0     003f861b  _calloc                         
+0     003f8619  _chkheap                        
+0     003f83c9  _close                          
+0     003f8ca8  _copy_in                        
+0     003f8c81  _exit                           
+0     003f8b54  _fclose                         
+0     003f8a6f  _fflush                         
+0     003f884a  _fopen                          
+0     003f8bc1  _fputc                          
+0     003f8890  _fputs                          
+0     003f8465  _free                           
+0     003f85fe  _free_memory                    
+0     003f882c  _freopen                        
+0     003f8c10  _fseek                          
+0     003f83b1  _lseek                          
+0     003f8d62  _main                           
+0     003f84ce  _malloc                         
+0     003f85df  _max_free                       
+0     003f8d34  _memccpy                        
+0     003f8d24  _memchr                         
+0     003f8cee  _memcpy                         
+0     003f8d41  _memset                         
+0     003f84ab  _minit                          
+0     003f8342  _open                           
+0     003f8c53  _printf                         
+0     003f8bc1  _putc                           
+0     003f8c0b  _putchar                        
+0     003f8920  _puts                           
+0     003f832a  _read                           
+0     003f852b  _realloc                        
+0     003f8d81  _remove                         
+0     003f8310  _remove_device                  
+0     003f82e5  _rename                         
+0     003f89c7  _setvbuf                        
+0     003f8d4d  _strchr                         
+0     003f8d58  _strcmp                         
+0     003f8d7c  _strcpy                         
+0     003f8d74  _strlen                         
+0     003f8ccc  _strncpy                        
+0     003f82cc  _unlink                         
+0     003f8266  _write                          
+abs   ffffffff  binit                           
+0     003f8d87  cinit                           
+0     003f8d87  etext                           
+abs   ffffffff  pinit                           
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+page  address   name                            
+----  -------   ----                            
+0     003f8002  .text                           
+0     003f8002  _HOSTwrite                      
+0     003f8002  ___text__                       
+0     003f803a  _HOSTunlink                     
+0     003f805f  _HOSTtime64                     
+0     003f80a3  _HOSTtime                       
+0     003f80d7  _HOSTrename                     
+0     003f8116  _HOSTread                       
+0     003f814e  _HOSTopen                       
+0     003f8187  _HOSTlseek                      
+0     003f81e3  _HOSTgetenv                     
+0     003f820b  _HOSTclose                      
+0     003f8232  _HOSTclock                      
+0     003f8266  _write                          
+0     003f82cc  _unlink                         
+0     003f82e5  _rename                         
+0     003f8310  _remove_device                  
+0     003f832a  _read                           
+0     003f8342  _open                           
+0     003f83b1  _lseek                          
+0     003f83c9  _close                          
+0     003f83fc  _add_device                     
+0     003f8465  _free                           
+0     003f84ab  _minit                          
+0     003f84ce  _malloc                         
+0     003f852b  _realloc                        
+0     003f85df  _max_free                       
+0     003f85fe  _free_memory                    
+0     003f8619  _chkheap                        
+0     003f861b  _calloc                         
+0     003f8739  ___TI_printfi_minimal           
+0     003f880f  ___TI_cleanup                   
+0     003f882c  _freopen                        
+0     003f884a  _fopen                          
+0     003f8890  _fputs                          
+0     003f8920  _puts                           
+0     003f8933  ___TI_writemsg                  
+0     003f8986  C$$IO$$                         
+0     003f898b  ___TI_readmsg                   
+0     003f89c7  _setvbuf                        
+0     003f8a40  ___TI_doflush                   
+0     003f8a6f  _fflush                         
+0     003f8aab  ___TI_wrt_ok                    
+0     003f8ae6  ___TI_rd_ok                     
+0     003f8b12  ___TI_closefile                 
+0     003f8b54  _fclose                         
+0     003f8b6d  _c_int00                        
+0     003f8bc1  _fputc                          
+0     003f8bc1  _putc                           
+0     003f8c0b  _putchar                        
+0     003f8c10  _fseek                          
+0     003f8c53  _printf                         
+0     003f8c7f  C$$EXIT                         
+0     003f8c7f  _abort                          
+0     003f8c81  _exit                           
+0     003f8ca8  _copy_in                        
+0     003f8ccc  _strncpy                        
+0     003f8cee  _memcpy                         
+0     003f8d0b  __args_main                     
+0     003f8d24  _memchr                         
+0     003f8d34  _memccpy                        
+0     003f8d41  _memset                         
+0     003f8d4d  _strchr                         
+0     003f8d58  _strcmp                         
+0     003f8d62  _main                           
+0     003f8d6b  __register_unlock               
+0     003f8d6f  __register_lock                 
+0     003f8d73  __nop                           
+0     003f8d74  _strlen                         
+0     003f8d7c  _strcpy                         
+0     003f8d81  _remove                         
+0     003f8d84  __system_pre_init               
+0     003f8d86  __system_post_cinit             
+0     003f8d87  ___cinit__                      
+0     003f8d87  ___etext__                      
+0     003f8d87  cinit                           
+0     003f8d87  etext                           
+1     00000400  __stack                         
+1     00000800  __STACK_END                     
+1     003f9000  __sys_memory                    
+1     003f9400  ___TI_ft_end                    
+1     003f9440  __ftable                        
+1     003f94c0  ___TI_tmpnams                   
+1     003f9570  ___TI_enable_exit_profile_output
+1     003f9572  ___TI_cleanup_ptr               
+1     003f9574  ___TI_dtors_ptr                 
+1     003f9576  __lock                          
+1     003f9578  __unlock                        
+1     003f9640  __CIOBUF_                       
+abs   00000400  __STACK_SIZE                    
+abs   00000400  __SYSMEM_SIZE                   
+abs   ffffffff  ___TI_pprof_out_hndl            
+abs   ffffffff  ___TI_prof_data_size            
+abs   ffffffff  ___TI_prof_data_start           
+abs   ffffffff  ___binit__                      
+abs   ffffffff  ___c_args__                     
+abs   ffffffff  ___pinit__                      
+abs   ffffffff  binit                           
+abs   ffffffff  pinit                           
+
+[99 symbols]

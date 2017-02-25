@@ -1,0 +1,1 @@
+"./hello.obj" "../2812_RAM_lnk.cmd" -llibc.a 
